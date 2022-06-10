@@ -1,0 +1,21 @@
+.bg-gray {
+    background-color: rgb(153, 153, 153);
+}
+
+.sold {
+    top: 0.5rem;
+    right: 0.5rem;
+}
+.buton{
+    width: 200px;
+    
+    
+}
+.jpg{
+    width: 250px;
+    height: 400px;
+    
+}
+.index{
+    z-index: 1;
+}
