@@ -20,3 +20,10 @@
 .index{
     z-index: 1;
 }
+li:link{
+    text-decoration: none;
+    
+}
+body{
+    background-color: rgb(213, 201, 201);
+}
