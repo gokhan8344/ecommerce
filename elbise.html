@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/my.css">
+
+    <style type="text/css">
+        .navbar .megamenu{ padding: 1rem; }
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+            
+            .navbar .has-megamenu{position:static!important;}
+            .navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+            
+        }	
+        /* ============ desktop view .end// ============ */
+        
+        
+        /* ============ mobile view ============ */
+        @media(max-width: 991px){
+            .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+                overflow-y: auto;
+                max-height: 90vh;
+                margin-top:10px;
+            }
+        }
+        /* ============ mobile view .end// ============ */
+        </style>
+        
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+                /////// Prevent closing from click inside dropdown
+                document.querySelectorAll('.dropdown-menu').forEach(function(element){
+                    element.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                    });
+                })
+            }); 
+            // DOMContentLoaded  end
+        </script>
+        
+    <title>Coder ECommerce Ana Sayfa</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+        <div class="container px-4 px-lg-5">
+            <a href="" class="navbar-brand">CODER</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar-content" class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+
+                    </li>
+                    <li class="nav-item"><a href="" class="nav-link">İletişim</a></li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-light">
+                        <i class="bi-cart-fill me-1"></i> Sepet
+                        <span class="badge bg-light text-dark ms-1 rounded-pill">1</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+
+    <section class="container py-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
+
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img class="mx-auto mt-2 d-block" src="indir2.webp" width="200px" height="300px" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="card.html" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute sold">Tükendi</div>
+                    <img src="indir.jpg" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            
+                            <!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Özelleştir
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Site mesajı</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bu ürün tükendi
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute sold">Tükendi</div>
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute sold">Tükendi</div>
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute sold">Tükendi</div>
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <div class="badge bg-dark text-white position-absolute sold">Tükendi</div>
+                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5>Awesome Product</h5>
+                            $50 - $75
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy;Coder Akademi 2022</p>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -5,12 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/my.css">
 
-
+    <style type="text/css">
+        .navbar .megamenu{ padding: 1rem; }
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+            
+            .navbar .has-megamenu{position:static!important;}
+            .navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+            
+        }	
+        /* ============ desktop view .end// ============ */
+        
+        
+        /* ============ mobile view ============ */
+        @media(max-width: 991px){
+            .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+                overflow-y: auto;
+                max-height: 90vh;
+                margin-top:10px;
+            }
+        }
+        /* ============ mobile view .end// ============ */
+        </style>
+        
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+                /////// Prevent closing from click inside dropdown
+                document.querySelectorAll('.dropdown-menu').forEach(function(element){
+                    element.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                    });
+                })
+            }); 
+            // DOMContentLoaded  end
+        </script>
+        
     <title>Coder ECommerce Ana Sayfa</title>
 </head>
 
@@ -25,15 +60,7 @@
             <div id="navbar-content" class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a href="" class="nav-link active">Ana Sayfa</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle " id="navbar-dropdown" role="button"
-                            data-bs-toggle="dropdown">Kategoriler</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="" class="dropdown-item">Tüm Ürünler</a></li>
-                            <li><a href="" class="dropdown-item">Bilgisayar</a></li>
-                            <li><a href="" class="dropdown-item">Cep Telefonu</a></li>
-                            <li><a href="" class="dropdown-item">Aksesuar</a></li>
-                        </ul>
+
                     </li>
                     <li class="nav-item"><a href="" class="nav-link">İletişim</a></li>
                 </ul>
@@ -62,27 +89,27 @@
             </div>
 
             <!-- resimler ve yazılar -->
-            <div class="container pt-5">
+            <div class="container mt-3 pt-5">
                 <div class="row">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="buyuk_banner_768x2000da4a507c4194812b28316c60ccc2fbf.webp" class="d-block w-100" alt="Slide 1">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
+                        <h5></h5>
                         <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="web_slider_biletinial.jpg" class="d-block w-100" alt="slide 2">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
+                        <h5></h5>
                         <p>Some representative placeholder content for the second slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="wwww2.jpg" class="d-block w-100" alt="Slide 3">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
+                        <h5></h5>
                         <p>Some representative placeholder content for the third slide.</p>
                     </div>
                 </div>
@@ -105,13 +132,314 @@
         </div>
     </section>
     <!-- slider -->
+    <!--nav section-->
+	<div class="container mt-3">
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8">
+
+<!-- ============= COMPONENT ============== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+	<a class="navbar-brand" href="#">CODER</a>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="main_nav">
+		<ul class="navbar-nav">
+
+            <li class="nav-item dropdown has-megamenu">
+				<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Moda </a>
+				<div class="dropdown-menu megamenu" role="menu">
+					<div class="row g-3">
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Kadın</h6>
+								<ul class="list-unstyled">
+									<li><a href="elbise.html">Elbise</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Erkek</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Çocuk</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div>    
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">AYAKKABI & ÇANTA</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+					</div><!-- end row --> 
+				</div> <!-- dropdown-mega-menu.// -->
+			</li>
+            <li class="nav-item dropdown has-megamenu">
+				<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Elektronik  </a>
+				<div class="dropdown-menu megamenu" role="menu">
+					<div class="row g-3">
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Ev Aletleri </h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Bilgisayar</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Televizyon</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div>    
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Telefon & Aksesuarları</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+					</div><!-- end row --> 
+				</div> <!-- dropdown-mega-menu.// -->
+			</li>
+            <li class="nav-item dropdown has-megamenu">
+				<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Ev & Yaşam </a>
+				<div class="dropdown-menu megamenu" role="menu">
+					<div class="row g-3">
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Mobilya</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title"> Dekorasyon</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">   Ev Tekstili</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div>    
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Mutfak Gereçleri</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+					</div><!-- end row --> 
+				</div> <!-- dropdown-mega-menu.// -->
+			</li>
+            <li class="nav-item dropdown has-megamenu">
+				<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kitap, Müzik, Film, Oyun </a>
+				<div class="dropdown-menu megamenu" role="menu">
+					<div class="row g-3">
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Kitap</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Müzik</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Film</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div>    
+						<div class="col-lg-3 col-6">
+							<div class="col-megamenu">
+								<h6 class="title">Oyun</h6>
+								<ul class="list-unstyled">
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+									<li><a href="#">Custom Menu</a></li>
+								</ul>
+							</div>  <!-- col-megamenu.// -->
+						</div><!-- end col-3 -->
+					</div><!-- end row --> 
+				</div> <!-- dropdown-mega-menu.// -->
+			</li>
+		</ul>
+
+	</div> <!-- navbar-collapse.// -->
+</div> <!-- container-fluid.// -->
+</nav>
+<!-- ============= COMPONENT END// ============== -->
+
+		<section class="section-content py-0">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="5935.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="6103.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="8028.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+		
+
+		</section>
+    </div>
+    </div>
+    <div class="col-2">
+
+    </div>
+	</div>
+
+    <!--nav section-->
     <!-- Products -->
     <section class="container mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 justify-content-center">
 
             <div class="col mb-4">
                 <div class="card h-100">
-                    <img class="mx-auto d-block" src="indir2.webp" width="290px" height="300px" alt="ürün">
+                    <img class="mx-auto d-block" src="indir2.webp" width="170px" height="300px" alt="ürün">
                     <div class="card-body p-4">
                         <div class="text-center">
                             <h5>Awesome Product</h5>
@@ -128,7 +456,7 @@
             <div class="col mb-4">
                 <div class="card h-100">
                     <div class="badge bg-dark text-white position-absolute sold">Tükendi</div>
-                    <img src="https://via.placeholder.com/450x300" alt="ürün">
+                    <img src="indir.jpg" alt="ürün">
                     <div class="card-body p-4">
                         <div class="text-center">
                             <h5>Awesome Product</h5>
@@ -137,7 +465,30 @@
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <a href="" class="btn btn-outline-dark mt-auto">Özelleştir</a>
+                            
+                            <!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Özelleştir
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Site mesajı</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bu ürün tükendi
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
                         </div>
                     </div>
                 </div>
@@ -320,7 +671,7 @@
     <!-- footer -->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
 </body>
 
 </html>
